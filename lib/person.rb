@@ -50,22 +50,29 @@ class Person
   def call_friend(friend)
     self.happiness += 3
     friend.happiness += 3
-    "Hi #{friend.name}! It's #{self.name}. How are you?"
+    "Hi #{friend.name}! It's #{name}. How are you?"
   end
 
   def start_conversation(friend, topic)
     case topic
     when 'politics'
-      friend.happiness -= 2
-      self.happiness -= 2
-      "blah blah partisan blah lobbyist"
+      politics(friend)
     when 'weather'
-      friend.happiness += 1
-      self.happiness += 1
-      "blah blah sun blah rain"
+      weather(friend)
     else
-      "blah blah blah blah blah"
+      'blah blah blah blah blah'
     end
   end
 
+  def politics(friend)
+    friend.happiness -= 2
+    self.happiness -= 2
+    'blah blah partisan blah lobbyist'
+  end
+
+  def weather(friend)
+    friend.happiness += 1
+    self.happiness += 1
+    'blah blah sun blah rain'
+  end
 end
