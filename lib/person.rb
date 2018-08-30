@@ -10,11 +10,11 @@ class Person
   end
 
   def happiness=(num)
-    @happiness = self.change_val(num)
+    @happiness = change_val(num)
   end
 
   def hygiene=(num)
-    @hygiene = self.change_val(num)
+    @hygiene = change_val(num)
   end
 
   def change_val(num)
